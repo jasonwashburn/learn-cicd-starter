@@ -34,14 +34,6 @@ func TestGetAPIKey(t *testing.T) {
 			want:    "1234567890",
 			wantErr: false,
 		},
-		{
-			name: "fail",
-			headers: http.Header{
-				"Authorization": []string{"Intentional failure"},
-			},
-			want:    "Intentional failure",
-			wantErr: false,
-		},
 	}
 
 	for _, test := range tests {
